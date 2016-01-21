@@ -41,6 +41,7 @@ module.exports = function (title, cb) {
 
   function select () {
     active = false
+    draw()
     process.stdin.pause()
     if (!isRaw) process.stdin.setRawMode(false)
     process.stdin.removeListener('keypress', onkeypress)
@@ -48,9 +49,14 @@ module.exports = function (title, cb) {
   }
 
   function draw () {
-    log(items.reduce(function (s, item, index) {
-      return s + (index === selected ? chalk.cyan('> ' + item.name) : '  ' + item.name) + '\n'
-    }, chalk.green('? ') + chalk.bold(title) + '\n'))
+    var q = chalk.green('? ') + chalk.bold(title)
+    if (active) {
+      log(items.reduce(function (s, item, index) {
+        return s + (index === selected ? chalk.cyan('> ' + item.name) : '  ' + item.name) + '\n'
+      }, q + '\n'))
+    } else {
+      log(q + ' ' + chalk.cyan(items[selected].name) + '\n')
+    }
   }
 
   return { add: add }
