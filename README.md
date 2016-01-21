@@ -7,6 +7,12 @@ time.
 [![Build status](https://travis-ci.org/watson/appendable-cli-menu.svg?branch=master)](https://travis-ci.org/watson/appendable-cli-menu)
 [![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg?style=flat)](https://github.com/feross/standard)
 
+## Installation
+
+```
+npm install appendable-cli-menu
+```
+
 ## Usage
 
 In this example we use the
