@@ -1,0 +1,37 @@
+{
+  "name": "appendable-cli-menu",
+  "version": "0.0.0",
+  "description": "Show a menu in the terminal were you can continuously append items",
+  "main": "index.js",
+  "dependencies": {
+    "chalk": "^1.1.1",
+    "keypress": "^0.2.1",
+    "single-line-log": "^1.0.1"
+  },
+  "devDependencies": {
+    "standard": "^5.4.1"
+  },
+  "scripts": {
+    "test": "standard && node test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/watson/appendable-cli-menu.git"
+  },
+  "keywords": [
+    "menu",
+    "list",
+    "cli",
+    "terminal",
+    "console",
+    "select",
+    "input",
+    "stdin"
+  ],
+  "author": "Thomas Watson Steen <w@tson.dk> (https://twitter.com/wa7son)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/watson/appendable-cli-menu/issues"
+  },
+  "homepage": "https://github.com/watson/appendable-cli-menu#readme"
+}
