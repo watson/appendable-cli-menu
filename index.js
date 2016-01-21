@@ -36,7 +36,7 @@ module.exports = function (title, cb) {
       selected++
       moved = true
       draw()
-    } else if (key.name === 'return') {
+    } else if (items.length > 0 && key.name === 'return') {
       select()
     }
   }
