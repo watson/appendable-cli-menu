@@ -55,6 +55,7 @@ module.exports = function (title, cb) {
     var q = chalk.green('? ') + chalk.bold(title)
     if (active) {
       if (items.length === 0) status = ' (waiting...)'
+      else if (!moved) status = ' (use arrow keys)'
 
       log(items.reduce(function (s, item, index) {
         return s + (index === selected ? chalk.cyan('> ' + item.name) : '  ' + item.name) + '\n'
