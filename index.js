@@ -8,6 +8,7 @@ module.exports = function (title, cb) {
   var items = []
   var isRaw = process.stdin.isRaw
   var active = true
+  var moved = false
   var selected = 0
 
   keypress(process.stdin)
@@ -33,6 +34,7 @@ module.exports = function (title, cb) {
     } else if (key.name === 'down') {
       if (selected >= items.length - 1) return
       selected++
+      moved = true
       draw()
     } else if (key.name === 'return') {
       select()
@@ -49,11 +51,14 @@ module.exports = function (title, cb) {
   }
 
   function draw () {
+    var status = ''
     var q = chalk.green('? ') + chalk.bold(title)
     if (active) {
+      if (items.length === 0) status = ' (waiting...)'
+
       log(items.reduce(function (s, item, index) {
         return s + (index === selected ? chalk.cyan('> ' + item.name) : '  ' + item.name) + '\n'
-      }, q + '\n'))
+      }, q + status + '\n'))
     } else {
       log(q + ' ' + chalk.cyan(items[selected].name) + '\n')
     }
