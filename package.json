@@ -1,6 +1,6 @@
 {
   "name": "appendable-cli-menu",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Show a menu in the terminal were you can continuously append items",
   "main": "index.js",
   "dependencies": {
@@ -35,7 +35,7 @@
   },
   "homepage": "https://github.com/watson/appendable-cli-menu#readme",
   "coordinates": [
-    78.21871604150668,
-    15.64107699963381
+    78.2171245022909,
+    15.635252228192144
   ]
 }
