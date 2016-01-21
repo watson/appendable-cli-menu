@@ -50,7 +50,7 @@ module.exports = function (title, cb) {
   function draw () {
     log(items.reduce(function (s, item, index) {
       return s + (index === selected ? chalk.cyan('> ' + item.name) : '  ' + item.name) + '\n'
-    }, title + ':\n'))
+    }, chalk.green('? ') + chalk.bold(title) + '\n'))
   }
 
   return { add: add }
