@@ -38,7 +38,7 @@ var browser = bonjour.find({ type: 'http' }, function (service) {
 The above call the `menu()` will show en empty menu to the user:
 
 ```
-Select an HTTP server:
+? Select an HTTP server (waiting...)
 
 ```
 
@@ -46,7 +46,7 @@ The subsequent calls to the `servers.add()` will add new options to the
 menu as they become available:
 
 ```
-Select an HTTP server:
+? Select an HTTP server (use arrow keys)
 > mafintosh
   feross
   watson
