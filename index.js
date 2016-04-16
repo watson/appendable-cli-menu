@@ -47,7 +47,7 @@ module.exports = function (title, cb) {
     process.stdin.pause()
     if (!isRaw) process.stdin.setRawMode(false)
     process.stdin.removeListener('keypress', onkeypress)
-    cb(items[selected].value)
+    cb(items[selected])
   }
 
   function draw () {
